@@ -1,0 +1,101 @@
+.friend-list {
+  padding: 10px;
+  &_pending {
+    &_title {
+      font-size: 16px;
+      position: relative;
+      cursor: pointer;
+      > i {
+        width: 25px;
+      }
+      > span:last-child {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &_list {
+      padding-left: 25px;
+      > div {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        margin-top: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid #e9ecef;
+
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+
+        > span {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  &_user {
+    margin-top: 10px;
+    &_title {
+      font-size: 16px;
+      position: relative;
+      cursor: pointer;
+      > i {
+        width: 25px;
+      }
+      > span:last-child {
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    &_list {
+      padding-left: 25px;
+      > div {
+        box-sizing: border-box;
+        width: 265px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 14px;
+        // padding-top: 10px;
+        // padding-bottom: 5px;
+        // padding-right: 10px;
+        padding: 10px 10px 5px 0;
+        border-bottom: 1px solid #e9ecef;
+        &:last-child {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+      &_nickname {
+        // margin-left: -30px;
+        height: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 120px;
+
+        > div {
+          &:last-child {
+            color: #888;
+            font-size: 12px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 140px;
+          }
+        }
+      }
+      &_date {
+        height: 40px;
+        width: 80px;
+        text-align: right;
+        color: #888;
+        font-size: 13px;
+      }
+    }
+  }
+}
