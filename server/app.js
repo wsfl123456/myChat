@@ -13,8 +13,8 @@ const bodyParser = require("body-parser"); /*post方法*/
 const cookieParser = require("cookie-parser");
 
 /* 启动服务 */
-http.listen(5000, function () {
-  console.log("listening on *:5000");
+http.listen(4000, function () {
+  console.log("listening on *:4000");
 });
 
 /* 链接mysql */
@@ -22,7 +22,8 @@ const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "MyNewPass",
+  password: "Fl888,./", //正式
+  // password: "MyNewPass", //本地
   database: "mychats",
 });
 connection.connect();
