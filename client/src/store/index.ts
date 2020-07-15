@@ -11,8 +11,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     username: '',
-    socket: {},
-    msgArr: [],
+    socket: {} as any,
+    msgArr: [] as any,
     isRefreshInfo: false,
     isRefreshPendingFriend: false,
     isRefreshAgreeFriend: false
@@ -21,9 +21,7 @@ export default new Vuex.Store({
     /* socket */
     init (state, userId) {
       // state.socket = io.connect('http://192.168.0.107:4000', {
-      state.socket = io.connect('http://10.0.4.104:4000', {
-        'force new connection': true
-      })
+      state.socket = io.connect('http://47.100.60.27:4000')
       state.socket.emit('addUser', userId)
     },
     disconnect (state) {
@@ -41,7 +39,7 @@ export default new Vuex.Store({
     },
     message (state, userId) {
       const vm = this as any
-      state.socket.on('sendMsgTo' + userId, function (obj) {
+      state.socket.on('sendMsgTo' + userId, function (obj: any) {
         state.msgArr.push(obj)
         /* 每次获取新数据时，消息列表滚动到最底部 */
         setTimeout(() => {
