@@ -18,7 +18,7 @@
               <i :class="{'el-icon-arrow-down': activeManul === 2, 'el-icon-arrow-right': activeManul !== 2}"></i>
               <span>我的好友</span>
               <span class="clr-888">（{{ userList.length }}）</span>
-              <span v-show="userList.length" class="fl-badge">{{ userList.length }}</span>
+              <!-- <span v-show="userList.length" class="fl-badge">{{ userList.length }}</span> -->
           </div>
           <div v-if="activeManul === 2" class="friend-list_user_list">
               <div v-for="(i, k) in userList" :key='i.id' @click="toChat(i.id)" :style="{ 'background': Number($route.params.userId) === i.id ? '#f8f9fa' : '' }">

@@ -21,7 +21,8 @@ export default new Vuex.Store({
     /* socket */
     init (state, userId) {
       // state.socket = io.connect('http://192.168.0.107:4000', {
-      state.socket = io.connect('http://47.100.60.27:4000')
+      state.socket = io.connect('http://47.100.60.27:4000') //正式
+      // state.socket = io.connect('http://10.1.4.68:4000') //本地
       state.socket.emit('addUser', userId)
     },
     disconnect (state) {
