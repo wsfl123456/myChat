@@ -13,8 +13,8 @@ const bodyParser = require("body-parser"); /*post方法*/
 const cookieParser = require("cookie-parser");
 
 /* 启动服务 */
-http.listen(4000, function () {
-  console.log("listening on *:4000");
+http.listen(5000, function () {
+  console.log("listening on *:5000");
 });
 
 /* 链接mysql */
@@ -90,6 +90,7 @@ app.use(bodyParser.json()); // 添加json解析
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use("/public", express.static(path.join(__dirname, "./public")));
+app.use("/static", express.static(path.join(__dirname, "./dist/static")));
 
 app.use((req, res, next) => {
   next();
@@ -116,6 +117,9 @@ const storage = multer.diskStorage({
 const upload = multer({
   storage: storage,
 });
+app.get('/', (req, res) => {
+  res.sendFile( __dirname + '/dist/index.html')
+})
 app.post("/upload", upload.single("logo"), (req, res) => {
   // 即将上传图片的key值 form-data对象{key: value}
   // 检查是否有文件待上传
