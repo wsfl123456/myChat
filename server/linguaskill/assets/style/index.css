@@ -56,7 +56,7 @@
 
 .wrap .top .modal .content {
   position: absolute;
-  width: 72vw;
+  /* width: 72vw; */
   bottom: -1vw;
   left: 50%;
   transform: translateX(-50%);
@@ -64,11 +64,12 @@
   color: #fff;
   text-align: center;
   background-color: #f2cdbc;
+  display: flex;
 }
-.wrap .top .modal .content > span {
+.wrap .top .modal .content > div {
   white-space: nowrap;
 }
-.wrap .top .modal .content > span > span {
+.wrap .top .modal .content > div > span {
   font-size: 3.5vw;
   white-space: nowrap;
 }
@@ -146,7 +147,7 @@
   width: 65.2vw;
   background-image: url("../imgs/top-split-2.png");
   color: #fff;
-  font-size: 3vw;
+  font-size: 2.7vw;
   text-align: center;
 }
 
@@ -172,7 +173,7 @@
   cursor: pointer;
 }
 
-.wrap .mid .one {
+.wrap .mid >.one {
   padding: 4vw 10vw;
 }
 
@@ -184,20 +185,22 @@
   background-size: 100%;
   background-repeat: no-repeat;
   color: #fff;
-  font-size: 1.5vw;
   padding-left: 11vw;
   display: flex;
+  font-size: 3.5vw;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
 }
 
 .wrap .mid .one .title p {
-  background-color: #f2cdbc;
+  transform: scale(0.5) translate(-50%, -50%);
+  width: 200%;
   margin-top: 0.3vw;
+  text-align: center;
 }
 .wrap .mid .one .title p:first-child {
   margin-top: 0;
+  transform: scale(0.5) translate(-50%, 50%);
 }
 .wrap .mid .one .intro {
   margin-top: 4vw;
@@ -260,7 +263,8 @@
   font-size: 1.5vw;
   color: black;
   background-color: #f2cdbc;
-  writing-mode: vertical-lr;
+  line-height: 1;
+  /* writing-mode: vertical-lr; */
 }
 
 .wrap .mid .one .circle img {
@@ -288,18 +292,21 @@
   background-size: 100%;
   background-repeat: no-repeat;
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 4vw;
   padding-left: 11vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* position: relative; */
 }
 
 .wrap .mid .two .title p {
-  background-color: #f2cdbc;
-  margin-top: 0.3vw;
-  overflow: hidden;
+  width: 200%;
+  text-align: center;
+  /* margin-top: ; */
+  /* background-color: red; */
+  transform: scale(0.5);
+  margin-left: -24vw;
+
+
 }
 .wrap .mid .two .intro {
   position: relative;
@@ -369,21 +376,35 @@
   align-items: center;
   justify-content: center;
   color: #fff;
-  font-size: 0.8vw;
 }
 
 .wrap .mid .two .bom .left > div {
-  padding: 0 3vw;
-  margin-left: 1vw;
+  width: 18vw;
   height: 6vw;
+  margin-left: 1vw;
+  /* padding: 0 3vw;
+  margin-left: 1vw;
+  height: 8vw; */
+  font-size: 2vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.wrap .mid .two .bom .left > div p {
+.wrap .mid .two .bom .left > div  p {
   text-align: center;
+  height: 2vw;
+  width: 36vw;
+  transform: scale(0.5);
+  /* margin-left: -9vw; */
+  margin-top: -0.5vw;
+}
+/* .wrap .mid .two .bom .left > div >div {
+  background-color: red;
+} */
+.wrap .mid .two .bom .left > div p:first-child {
+  margin-top: 0;
 }
 
 .wrap .mid .two .bom .left .one {
@@ -394,8 +415,13 @@
 }
 .wrap .mid .two .bom .left .three {
   background-color: #e23761;
-  font-size: 1.3vw;
+  font-size: 2.4vw;
 }
+/* .wrap .mid .two .bom .left .three p {
+  height: 2vw;
+  width: 18vw;
+  transform: scale(1);
+} */
 
 .wrap .mid .two .bom .right {
   width: 23vw;
@@ -651,15 +677,17 @@
   background-size: 100%;
   background-repeat: no-repeat;
   color: #fff;
-  font-size: 1.5vw;
+  font-size: 4vw;
   padding-left: 11vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* flex-direction: column; */
 }
 .wrap .footer .quanyi .title p {
-  background-color: #f2cdbc;
+  transform: scale(0.5);
+  width: 200%;
+  margin-left: -24vw;
+  text-align: center;
+
 }
 
 .wrap .footer .quanyi img {
@@ -696,8 +724,8 @@
   text-align: center;
 }
 
-.wrap .footer .btn >div {
-  background-color: #D6DCE5;
+.wrap .footer .btn > div {
+  background-color: #d6dce5;
   padding: 0.5vw 2vw;
   border-radius: 1vw;
   display: inline-block;
@@ -706,11 +734,9 @@
   margin-bottom: 4vw;
 }
 
-.wrap .footer .btn >div >div {
+.wrap .footer .btn > div > div {
   display: inline-block;
-  color: #D6071B;
+  color: #d6071b;
   font-size: 3vw;
   background-color: #f2cdbc;
 }
-
-
